@@ -280,7 +280,7 @@ func (m *MockProductWriter) EXPECT() *MockProductWriterMockRecorder {
 // Save mocks base method.
 func (m *MockProductWriter) Save(product application.ProductInterface) (application.ProductInterface, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Save", product)
+	ret := m.ctrl.Call(m, "Create", product)
 	ret0, _ := ret[0].(application.ProductInterface)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
@@ -289,7 +289,7 @@ func (m *MockProductWriter) Save(product application.ProductInterface) (applicat
 // Save indicates an expected call of Save.
 func (mr *MockProductWriterMockRecorder) Save(product interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockProductWriter)(nil).Save), product)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockProductWriter)(nil).Save), product)
 }
 
 // MockProductPersistenceInterface is a mock of ProductPersistenceInterface interface.
@@ -333,7 +333,7 @@ func (mr *MockProductPersistenceInterfaceMockRecorder) Get(id interface{}) *gomo
 // Save mocks base method.
 func (m *MockProductPersistenceInterface) Save(product application.ProductInterface) (application.ProductInterface, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Save", product)
+	ret := m.ctrl.Call(m, "Create", product)
 	ret0, _ := ret[0].(application.ProductInterface)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
@@ -342,5 +342,5 @@ func (m *MockProductPersistenceInterface) Save(product application.ProductInterf
 // Save indicates an expected call of Save.
 func (mr *MockProductPersistenceInterfaceMockRecorder) Save(product interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Save", reflect.TypeOf((*MockProductPersistenceInterface)(nil).Save), product)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockProductPersistenceInterface)(nil).Save), product)
 }
